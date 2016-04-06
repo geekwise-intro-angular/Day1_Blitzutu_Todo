@@ -12,7 +12,9 @@
     });
     angular.module('todo').controller('myCtrl2', function($scope){
       $scope.message = "Angular.js";
-      $scope.list =['wake', 'drive', 'work', 'go home'];
+      $scope.list = [{item:"bbq", price:"$99"},{item:"shed", price:"$99"}];
+
+
     });
 
   </script>
@@ -30,10 +32,10 @@
     </div>
 
 
-<div ng-controller="myCtrl2">
+  <div ng-controller="myCtrl2">
   {{message}}
-
-</div>
+    <div ng-repeat = "things in list"><button>{{things.item}}</button><button>{{things.price}}</button></div>
+  </div>
 
 </div>
 
